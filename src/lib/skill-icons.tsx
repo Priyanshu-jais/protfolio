@@ -1,0 +1,77 @@
+import type { ComponentType } from "react";
+import {
+  SiCplusplus,
+  SiGo,
+  SiKotlin,
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiNodedotjs,
+  SiExpress,
+  SiRedis,
+  SiApachekafka,
+  SiJetpackcompose,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiD3,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiFirebase,
+  SiPrisma,
+  SiDocker,
+  SiGit,
+  SiPostman,
+  SiVercel,
+  SiMixpanel,
+  SiSocketdotio,
+  SiKtor,
+} from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { Database, Server, Layers, Boxes, Cloud, Radio, Video } from "lucide-react";
+
+type IconType = ComponentType<{ className?: string }>;
+
+const map: Record<string, IconType> = {
+  "C++": SiCplusplus,
+  Go: SiGo,
+  "Go REST APIs": SiGo,
+  Kotlin: SiKotlin,
+  "Kotlin Multiplatform": SiKotlin,
+  JavaScript: SiJavascript,
+  TypeScript: SiTypescript,
+  Python: SiPython,
+  Java: FaJava,
+  SQL: Database,
+  "Node.js": SiNodedotjs,
+  "Express.js": SiExpress,
+  Ktor: SiKtor,
+  Redis: SiRedis,
+  WebSocket: SiSocketdotio,
+  Kafka: SiApachekafka,
+  "Agora SDK": Video,
+  Microservices: Boxes,
+  "Jetpack Compose": SiJetpackcompose,
+  "React.js": SiReact,
+  "Next.js": SiNextdotjs,
+  SDUI: Layers,
+  "Tailwind CSS": SiTailwindcss,
+  "D3.js": SiD3,
+  PostgreSQL: SiPostgresql,
+  MySQL: SiMysql,
+  MongoDB: SiMongodb,
+  Firestore: SiFirebase,
+  "Prisma ORM": SiPrisma,
+  "AWS S3": Cloud,
+  Docker: SiDocker,
+  Git: SiGit,
+  Firebase: SiFirebase,
+  Postman: SiPostman,
+  Mixpanel: SiMixpanel,
+  Vercel: SiVercel,
+};
+
+export function getSkillIcon(name: string): IconType {
+  return map[name] ?? Server;
+}
