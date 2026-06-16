@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import doraemonImg from "@/assets/doraemon-scared.png";
+import doraemonImg from "@/assets/doraemon-scared-run.png";
 import mouse from "@/assets/mouse.png";
 
 const SCARED_LINES = [

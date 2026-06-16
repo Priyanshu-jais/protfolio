@@ -1,8 +1,7 @@
 import { GraduationCap, Users } from "lucide-react";
 import { Section, Reveal } from "./Section";
 import { profile, stats, education, leadership } from "@/lib/portfolio-data";
-// To use your real photo: add priyanshu.png to src/assets/ and uncomment the line below
-// import portrait from "@/assets/priyanshu.png";
+import portrait from "@/assets/priyanshu.png";
 
 export function About() {
   return (
@@ -14,26 +13,14 @@ export function About() {
               className="pointer-events-none absolute -inset-3 rounded-[2rem] opacity-60 blur-2xl"
               style={{ backgroundImage: "var(--gradient-hero)" }}
             />
-            {/* Gradient avatar — replace with <img src={portrait} ...> once you add priyanshu.png to src/assets/ */}
-            <div
-              className="relative w-full aspect-[4/5] rounded-[1.75rem] border border-border shadow-glow overflow-hidden flex items-center justify-center"
-              style={{ background: "var(--gradient-hero)" }}
-            >
-              <span
-                className="select-none font-display font-bold text-white"
-                style={{ fontSize: "clamp(4rem, 12vw, 7rem)", letterSpacing: "-0.03em", opacity: 0.92 }}
-              >
-                PJ
-              </span>
-              {/* Shimmer overlay */}
-              <div
-                className="pointer-events-none absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%, rgba(255,255,255,0.06) 100%)",
-                }}
-              />
-            </div>
+            <img
+              src={portrait}
+              alt="Priyanshu Jaiswal"
+              width={480}
+              height={600}
+              loading="lazy"
+              className="relative w-full rounded-[1.75rem] border border-border object-cover shadow-glow"
+            />
           </div>
 
           <div className="mt-6 grid grid-cols-2 gap-4">
