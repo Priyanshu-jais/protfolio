@@ -8,19 +8,31 @@ export function About() {
     <Section id="about" eyebrow="About" title="Who I Am">
       <div className="grid items-start gap-10 md:grid-cols-5">
         <Reveal className="md:col-span-2">
-          <div className="relative mx-auto max-w-xs">
+          <div className="relative mx-auto max-w-[280px]">
+            {/* Glowing blurred backdrop */}
             <div
-              className="pointer-events-none absolute -inset-3 rounded-[2rem] opacity-60 blur-2xl"
+              className="pointer-events-none absolute -inset-4 rounded-full opacity-70 blur-2xl"
               style={{ backgroundImage: "var(--gradient-hero)" }}
             />
-            <img
-              src={portrait}
-              alt="Priyanshu Jaiswal"
-              width={480}
-              height={600}
-              loading="lazy"
-              className="relative w-full rounded-[1.75rem] border border-border object-cover shadow-glow"
+            {/* Animated gradient ring */}
+            <div
+              className="absolute -inset-[3px] rounded-full"
+              style={{
+                background: "var(--gradient-text)",
+                padding: "3px",
+              }}
             />
+            {/* Circle image */}
+            <div className="relative aspect-square overflow-hidden rounded-full border-4 border-primary/40 shadow-glow">
+              <img
+                src={portrait}
+                alt="Priyanshu Jaiswal"
+                width={480}
+                height={480}
+                loading="lazy"
+                className="h-full w-full object-cover object-top"
+              />
+            </div>
           </div>
 
           <div className="mt-6 grid grid-cols-2 gap-4">
