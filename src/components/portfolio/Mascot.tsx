@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import doraemonAsset from "@/assets/doraemon-scared-run.png.asset.json";
+import doraemonImg from "@/assets/doraemon-scared.png";
 import mouse from "@/assets/mouse.png";
 
 const SCARED_LINES = [
@@ -81,7 +81,7 @@ export function Mascot() {
           </div>
           <div>
             <img
-              src={doraemonAsset.url}
+              src={doraemonImg}
               alt="Scared Doraemon running"
               width={400}
               height={400}
